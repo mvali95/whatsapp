@@ -20,7 +20,7 @@
     "fs": "0.0.1-security",
     "lodash": "^4.17.15",
     "path": "^0.12.7",
-    "string_decoder": "^1.2.0",
+    "string_decoder": "^1.3.0",
     "ws": "^3.3.3"
   },
   "devDependencies": {
