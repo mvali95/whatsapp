@@ -7,7 +7,9 @@
     "test": "concurrently --kill-others \"node index.js\" \"./backend/whatsapp-web-backend.py\"",
     "start": "npm run dev",
     "dev": "concurrently --kill-others \"./node_modules/.bin/nodemon index.js -i client -e js\" \"./node_modules/.bin/nodemon --exec python ./backend/whatsapp_web_backend.py -i client -e py\" \"sass --watch client/css/main.scss:client/css/main.css\"",
-    "win": "concurrently --kill-others \"node_modules\\.bin\\nodemon index.js -i client -e js\" \"node_modules\\.bin\\nodemon --exec python ./backend/whatsapp_web_backend.py -i client -e py\" \"sass --watch client/css/main.scss:client/css/main.css\""
+    "win": "concurrently --kill-others \"node_modules\\.bin\\nodemon index.js -i client -e js\" \"node_modules\\.bin\\nodemon --exec python ./backend/whatsapp_web_backend.py -i client -e py\" \"sass --watch client/css/main.scss:client/css/main.css\"",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "sigalor",
   "license": "MIT",
@@ -21,11 +23,13 @@
     "lodash": "^4.17.15",
     "path": "^0.12.7",
     "string_decoder": "^1.2.0",
-    "ws": "^3.3.3"
+    "ws": "^3.3.3",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "concurrently": "^3.6.1",
     "nodemon": "^1.18.10",
     "sass": "^1.14.1"
-  }
+  },
+  "snyk": true
 }
